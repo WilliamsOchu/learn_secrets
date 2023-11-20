@@ -5,9 +5,6 @@ on:
         branches:
             - master
 
-env:
-    GOAT: $GAOT
-
 jobs:
     build:
         runs-on: ubuntu-latest
@@ -28,7 +25,9 @@ jobs:
               run: python -c "import sys; print(sys.version)"
 
             - name: Run the python code
-              run: python testing_secrets.py
+              run: |
+                $GOAT
+                python testing_secrets.py
 
     display:
         runs-on: ubuntu-latest
