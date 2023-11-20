@@ -15,7 +15,7 @@ jobs:
             - name: Display custom variables
               run: |
                 echo "AFRICA"
-                python3 testing_secrets.py
+                python3 /testing_secrets.py
 
 
 
