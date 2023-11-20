@@ -5,6 +5,9 @@ on:
         branches:
             - master
 
+env:
+    GOAT: ${{ vars.GOAT }}
+
 jobs:
     build:
         runs-on: ubuntu-latest
@@ -26,7 +29,6 @@ jobs:
 
             - name: Run the python code
               run: |
-                $GOAT
                 python testing_secrets.py
 
     display:
