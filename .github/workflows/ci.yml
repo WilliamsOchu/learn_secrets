@@ -1,4 +1,4 @@
-name: CI
+name: Python package
 
 on:
     push:
@@ -6,16 +6,23 @@ on:
             - master
 
 jobs:
-    display:
+    build:
         runs-on: ubuntu-latest
 
 
 
         steps:
-            - name: Display custom variables
-              run: |
-                echo "AFRICA"
-                python3 /testing_secrets.py
+            - uses: actions/checkout@v4
+            - name: Set up Python
+
+              uses: actions/setup-python@v4
+              with:
+                python-version: '3.x'
+                architecture: 'x64'
+
+
+            - name: Display Python version
+              run: python -c "import sys; print(sys.version)"
 
 
 
