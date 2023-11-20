@@ -6,7 +6,7 @@ on:
             - master
 
 env:
-    GOAT: ${{ secrets.GOAT }}
+    GOAT: ${{ vars.GOAT }}
 
 jobs:
     build:
