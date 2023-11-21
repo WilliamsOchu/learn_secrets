@@ -38,6 +38,7 @@ jobs:
             - name: Run the python tests
               run: |
                 pip install azure-cosmos
+                pushd func-testgithubact
                 python tests.py
 
     display:
