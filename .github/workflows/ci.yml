@@ -7,13 +7,17 @@ on:
 
 env:
     GOAT: ${{ vars.GOAT }}
+    COSMOSDB_ACC_NAME: ${{ vars.COSMOSDB_ACC_NAME}}
+    COSMOSDB_CLIENT: ${{ vars. COSMOSDB_CLIENT}}
+    COSMOSDB_CONT_NAME: ${{ vars. COSMOSDB_CONT_NAME}}
+    COSMOS_ENDPOINT: ${{ vars. COSMOS_ENDPOINT}}
+    COSMOS_KEY: ${{ vars. COSMOS_KEY}}
+    
+    
 
 jobs:
     build:
         runs-on: ubuntu-latest
-
-
-
         steps:
             - uses: actions/checkout@v4
             - name: Set up Python
@@ -30,6 +34,10 @@ jobs:
             - name: Run the python code
               run: |
                 python testing_secrets.py
+
+            - name: Run the python tests
+              run: |
+                python tests.py
 
     display:
         runs-on: ubuntu-latest
