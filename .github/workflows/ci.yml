@@ -40,6 +40,7 @@ jobs:
                 pip install azure-cosmos
                 pushd func-testgithubact
                 python tests.py
+                popd
 
     display:
         runs-on: ubuntu-latest
