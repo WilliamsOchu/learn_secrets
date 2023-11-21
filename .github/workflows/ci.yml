@@ -37,6 +37,7 @@ jobs:
 
             - name: Run the python tests
               run: |
+                pip install azure-cosmos
                 python tests.py
 
     display:

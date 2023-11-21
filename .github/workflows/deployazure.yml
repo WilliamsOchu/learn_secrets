@@ -1,7 +1,7 @@
 name: Deploy Python project to Azure Function App
 
 on:
-  [push]
+  [pu
 
 env:
   AZURE_FUNCTIONAPP_NAME: apptestwithsecrets   # set this to your function app name on Azure
