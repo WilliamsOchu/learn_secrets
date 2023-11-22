@@ -127,7 +127,7 @@ bin
 obj
 appsettings.json
 local.settings.json
-/host.json
+
 
 # Azurite artifacts
 __blobstorage__
@@ -139,3 +139,4 @@ __azurite_db*__.json
 .vscode
 requirements.txt
 .funcignore
+host.json
